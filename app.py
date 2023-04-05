@@ -61,8 +61,8 @@ st.set_page_config(layout="wide")
 
 # Get the values of the environment variables
 #load_dotenv()
-#openai_api_key = os.getenv("OPENAI_API_KEY")
-openai_api_key = st.secrets["openai_api_key"]
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["openai_api_key"]
 
 # web
 st.title('기업어때')
