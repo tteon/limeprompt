@@ -1,0 +1,4 @@
+name: limeprompt
+channels:
+  - defaults
+prefix: /home/hardy/miniconda3/envs/limeprompt
