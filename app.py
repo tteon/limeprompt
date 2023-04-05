@@ -246,7 +246,7 @@ try:
                             stream=False,
                         )
                 
-                st.markdown('{advisor} 의 레포팅입니다.')
+                st.markdown(f'{advisor} 의 레포팅입니다.')
                 report = paragraph_preprocessing(response['choices'][0]['message']['content'])
                 st.write(report)
 
