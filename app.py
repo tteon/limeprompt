@@ -57,7 +57,7 @@ def slow_function():
         time.sleep(1)
 
 # Enable wide mode
-st.set_page_config(layout="wide", base="dark")
+st.set_page_config(layout="wide")
 
 # Get the values of the environment variables
 #load_dotenv()
