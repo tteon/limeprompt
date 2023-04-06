@@ -71,7 +71,7 @@ def slow_function():
 
 # Enable wide mode
 # pavicon
-image_pavicon = Image.open('sunrise.jpg')
+image_pavicon = Image.open('img/기업어때_Icon500x500_favicon_1.png')
 st.set_page_config(
     page_title="기업어때",
     page_icon= st.image(image_pavicon,width=50),
