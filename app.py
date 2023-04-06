@@ -184,11 +184,12 @@ def generate_report():
         
         # Simulate a time delay
         time.sleep(1)
+	
+    # Display the report
+    text_area.text("Report generation complete!")
 
 generate_report()
 	
-# Display the report
-text_area.text("Report generation complete!")
 
 #############################################################################################
 targetticker = st.text_input('분석할 기업의 티커를 입력해주세요.',placeholder='예시) NVDA')
