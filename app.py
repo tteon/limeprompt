@@ -27,7 +27,7 @@ def img_to_bytes(img_path):
     return encoded
 
 def img_to_html(img_path, width = 500, height = 500):
-    img_html = f"<img src='data:image/png;base64,{img_to_bytes(img_path}' height = {height} width = {width} class='img-fluid'>"
+    img_html = f"<img src='data:image/png;base64,{img_to_bytes(img_path)}' height = {height} width = {width} class='img-fluid'>"
     return img_html
 
 def paragraph_preprocessing(paragraph):
