@@ -82,7 +82,7 @@ openai.api_key = st.secrets["openai_api_key"]
 
 # web
 st.title('기업어때')
-st.markdown(img_to_html('img/기업어때_Icon500x500_favicon_2.png'), unsafe_allow_html=True)
+st.markdown(img_to_html('img/기업어때_Icon500x500_favicon_2.png',width = 500, height = 500), unsafe_allow_html=True)
 st.header('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
 
 # investors 
