@@ -20,6 +20,7 @@ from dotenv import load_dotenv
 # img_to_bytes and img_to_html inspired from https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
 import base64
 from pathlib import Path
+from PIL import Image
 
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
@@ -69,9 +70,11 @@ def slow_function():
         time.sleep(1)
 
 # Enable wide mode
+# pavicon
+image_pavicon = Image.open('sunrise.jpg')
 st.set_page_config(
     page_title="기업어때",
-    page_icon=st.image(image='img/기업어때_Icon500x500_favicon_1.png', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto"),
+    page_icon= st.image(image_pavicon,width=50),
     layout="wide",
 )
 
