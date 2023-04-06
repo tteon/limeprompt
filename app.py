@@ -17,6 +17,22 @@ import re
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
+# img_to_bytes and img_to_html inspired from https://pmbaumgartner.github.io/streamlitopedia/sizing-and-images.html
+import base64
+from pathlib import Path
+
+def img_to_bytes(img_path):
+    img_bytes = Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+def img_to_html(img_path):
+    img_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
+      img_to_bytes(img_path)
+    )
+    return img_html
+
+st.markdown(img_to_html('img/기업어때_Icon500x500_favicon_2.png'), unsafe_allow_html=True)
+
 
 def paragraph_preprocessing(paragraph):
     # Remove any line breaks and extra white space
