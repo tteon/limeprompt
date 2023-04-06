@@ -71,7 +71,7 @@ def slow_function():
 # Enable wide mode
 st.set_page_config(
     page_title="기업어때",
-    page_icon="🧊favicon",
+    page_icon=st.image(image='img/기업어때_Icon500x500_favicon_1.png', caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto"),
     layout="wide",
 )
 
@@ -82,13 +82,13 @@ openai.api_key = st.secrets["openai_api_key"]
 
 # web
 
-st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
+# st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
 
 col1, col2 = st.columns([1,15])
 with col1:
 	st.markdown(body = img_to_html(img_path='img/기업어때_Icon500x500_favicon_2.png' , width= 100, height = 100), unsafe_allow_html=True)
 with col2:
-	st.header('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
+	st.markdown('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
 
 # investors 
 investors = {
