@@ -42,6 +42,7 @@ def paragraph_preprocessing(paragraph):
     paragraph = ' '.join(paragraph)
     return paragraph
 
+
 def loadcompanyinformation(company:str = 'NVDA', item:str = 'income_statement'):
     infodict = defaultdict()
     commpanyinfo = Ticker(company)
@@ -50,6 +51,7 @@ def loadcompanyinformation(company:str = 'NVDA', item:str = 'income_statement'):
             infodict[idx] = info
     accountinginfo = infodict.items()
     return accountinginfo
+
 
 def getlongname(symbol):    
     # Define the URL for the stock's Yahoo Finance page
@@ -76,9 +78,9 @@ st.set_page_config(
 )
 
 # Get the values of the environment variables
-# load_dotenv()
-# openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = st.secrets["openai_api_key"]
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = st.secrets["openai_api_key"]
 
 # empty report
 report = ' '
@@ -130,7 +132,7 @@ advisor = st.selectbox(
 if advisor:
     st.markdown(f"<p style='color: #6482FF; font-size: 10px'>{advisor}을 고르셨군요! {advisor}의 특징을 확인해보세요.</p>", unsafe_allow_html=True)
 
-with st.expander('투자대가의 조언'):
+with st.expander('투자대가의 일장일단'):
 
         col1, col2 = st.columns(2)
         with col1:
@@ -259,7 +261,7 @@ try:
                 # wait time
                 col2height = 350
                 waitparagraph = st.empty()
-                waitparagraph.text_area(label = f"그거 알고 계신가요?", placeholder= f"레포팅을 이용해서 투자일지를 적을 수 있는 공간이 있습니다. 레포팅 완성 후 하단의 다운로드 버튼을 클릭하신후에 블로그 글 작성시에 함께 활용해보세요 !" , height=col2height)
+                waitparagraph.text_area(label = f"이런 기능도 있어요", placeholder= f"레포팅을 이용해서 투자일지를 적을 수 있는 공간이 있습니다. 레포팅 완성 후 하단의 다운로드 버튼을 클릭하신후에 블로그 글 작성시에 함께 활용해보세요 ! 레포트를 열심히 만들고 있어요 조금만 기다려 주세요." , height=col2height)
 
                 # accounting information ##########
                 accountingitem = 'income_statement'
@@ -289,7 +291,7 @@ try:
                         )
 		
                 # report shoot
-		if response:
+                if response:
                     waitparagraph.empty()
                     # report = paragraph_preprocessing(response['choices'][0]['message']['content'])
                     # st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
