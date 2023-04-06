@@ -78,8 +78,8 @@ st.set_page_config(
 )
 
 # Get the values of the environment variables
-#load_dotenv()
-#openai.api_key = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+# openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = st.secrets["openai_api_key"]
 
 # web
@@ -174,7 +174,7 @@ button:active {
 
 #############################################################################################
 
-	
+
 
 #############################################################################################
 targetticker = st.text_input('분석할 기업의 티커를 입력해주세요.',placeholder='예시) NVDA')
@@ -255,6 +255,11 @@ try:
             # prompt engineering #######################################################################
 
             with col2:
+                # wait time
+                col2height = 350
+                waitparagraph = st.empty()
+                waitparagraph.text_area(label = f"그거 알고 계신가요?", placeholder= f"레포팅을 이용해서 투자일지를 적을 수 있는 공간이 있는데요." , height=col2height)
+
                 # accounting information ##########
                 accountingitem = 'income_statement'
                 accountinginfo = loadcompanyinformation(company=companylongname,item=accountingitem)
@@ -282,12 +287,11 @@ try:
                             stream=False,
                         )
 		
-		# report shoot
-		st.text_area(f'레포트 생성 전까지 잠시 기다려 주세요!')
-		if response:
-		    st.markdown(f'{advisor} 의 레포팅입니다.')
-		    report = paragraph_preprocessing(response['choices'][0]['message']['content'])
-		    st.write(report)
+                # report shoot
+                if response:
+                    waitparagraph.empty()
+                    report = paragraph_preprocessing(response['choices'][0]['message']['content'])
+                    st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
 
 except AttributeError:
     st.caption(f'⚠️ 티커가 입력되어있지 않아요. 티커 입력 후 Enter 를 눌러주세요.')
