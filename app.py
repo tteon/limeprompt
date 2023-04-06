@@ -285,9 +285,9 @@ try:
 		# report shoot
 		st.text_area(f'레포트 생성 전까지 잠시 기다려 주세요!')
 		if response:
-			st.markdown(f'{advisor} 의 레포팅입니다.')
-			report = paragraph_preprocessing(response['choices'][0]['message']['content'])
-			st.write(report)
+		    st.markdown(f'{advisor} 의 레포팅입니다.')
+		    report = paragraph_preprocessing(response['choices'][0]['message']['content'])
+		    st.write(report)
 
 except AttributeError:
     st.caption(f'⚠️ 티커가 입력되어있지 않아요. 티커 입력 후 Enter 를 눌러주세요.')
