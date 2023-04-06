@@ -127,16 +127,15 @@ with st.expander('투자대가의 조언'):
 m = st.markdown(
 """
 <style>
-div.stButton > button:first-child {
-    background:linear-gradient(to bottom, #8605ff 5%, #e89ce8 100%);
-    background-color: #6482FF;
-    color:#FFFFFF;
+div.stButton > {
+  background: linear-gradient(to right, #2622f0, #a53092);
+  color: #fff; /* set text color to white */
+  padding: 12px 24px; /* set button padding */
+  border: none; /* remove border */
+  border-radius: 4px; /* set border radius */
+  cursor: pointer; /* set cursor to pointer on hover */
+  font-size: 16px; /* set font size */
 }
-div.stButton > button:hover {
-    background:linear-gradient(to bottom, #e89ce8 5%, #8605ff 100%);
-    background-color: #0000FF;
-    color:#ff0000;
-    }
 </style>
 """,
 unsafe_allow_html=True)
