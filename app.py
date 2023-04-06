@@ -261,7 +261,7 @@ try:
                 # wait time
                 col2height = 350
                 waitparagraph = st.empty()
-                waitparagraph.text_area(label = f"그거 알고 계신가요?", placeholder= f"레포팅을 이용해서 투자일지를 적을 수 있는 공간이 있는데요." , height=col2height)
+                waitparagraph.text_area(label = f"그거 알고 계신가요?", placeholder= f"레포팅을 이용해서 투자일지를 적을 수 있는 공간이 있습니다. 레포팅 완성 후 하단의 다운로드 버튼을 클릭하신후에 블로그 글 작성시에 함께 활용해보세요 !" , height=col2height)
 
                 # accounting information ##########
                 accountingitem = 'income_statement'
