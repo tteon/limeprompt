@@ -173,22 +173,7 @@ button:active {
 
 
 #############################################################################################
-def generate_report():
-    # Create an empty container for the text area
-    text_area = st.empty()
-    
-    # Perform some time-consuming task
-    for i in range(10):
-        # Update the text area with the current wait time
-        text_area.text(f"Please wait... Generating report {i+1}/10")
-        
-        # Simulate a time delay
-        time.sleep(1)
-	
-    # Display the report
-    text_area.text("Report generation complete!")
 
-generate_report()
 	
 
 #############################################################################################
@@ -297,7 +282,22 @@ try:
                             stream=False,
                         )
                 
-		
+		def generate_report():
+		    # Create an empty container for the text area
+		    text_area = st.empty()
+
+		    # Perform some time-consuming task
+		    for i in range(10):
+			# Update the text area with the current wait time
+			text_area.text(f"Please wait... Generating report {i+1}/10")
+
+			# Simulate a time delay
+			time.sleep(1)
+
+		text_area = st.empty()
+		text_area.text(f" 레포트를 생성하는 중입니다. 잠시만 기다려 주시면 감사하겠습니다~ ")
+		if response:
+			text_area = st.empty()
 		
                 st.markdown(f'{advisor} 의 레포팅입니다.')
                 report = paragraph_preprocessing(response['choices'][0]['message']['content'])
