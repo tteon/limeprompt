@@ -89,8 +89,8 @@ openai.api_key = st.secrets["openai_api_key"]
 col1, col2 = st.columns([1,15])
 with col1:
 	st.markdown(body = img_to_html(img_path='img/기업어때_Icon500x500_favicon_2.png' , width= 100, height = 100), unsafe_allow_html=True)
-with col2:
-	st.markdown(f"<h1 style='font-size:24px'>안녕하세요. 투자대가와 분석할 기업을 선택해주세요.</h1>", unsafe_allow_html=True)
+with col2:style=
+	st.markdown(f"<h1 style='font-size:24px margin-top:50px'>안녕하세요. 투자대가와 분석할 기업을 선택해주세요.</h1>", unsafe_allow_html=True)
 
 # investors 
 investors = {
