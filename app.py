@@ -81,7 +81,7 @@ st.set_page_config(
 openai.api_key = st.secrets["openai_api_key"]
 
 # web
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1,1.5])
 with col1:
 	st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
 with col2:
