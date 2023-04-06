@@ -82,8 +82,13 @@ openai.api_key = st.secrets["openai_api_key"]
 
 # web
 st.title('기업어때')
-st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
+st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', <h1/ width= 100, height = 100), unsafe_allow_html=True)
 st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_2.png', width= 100, height = 100), unsafe_allow_html=True)
+st.markdown("""
+![Streamlit Logo](https://avatars.githubusercontent.com/u/45109972?s=200&v=4 "Streamlit Logo")
+
+Welcome to my Streamlit app! This is some text that goes alongside the logo.
+""")
 st.header('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
 
 # investors 
