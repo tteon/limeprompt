@@ -58,7 +58,7 @@ def slow_function():
 
 # Enable wide mode
 st.set_page_config(
-    page_title="여기어때",
+    page_title="기업어",
     page_icon="🧊favicon",
     layout="wide",
 )
