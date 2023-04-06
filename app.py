@@ -128,7 +128,7 @@ m = st.markdown(
 """
 <style>
 div.stButton > .myButton {
-	background:linear-gradient(to bottom, #2522f0 5%, #a53091 100%);
+	background:linear-gradient(to right, #2522f0 5%, #a53091 100%);
 	background-color:#2522f0;
 	border-radius:28px;
 	border:1px solid #ffffff;
@@ -140,14 +140,6 @@ div.stButton > .myButton {
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
-}
-.myButton:hover {
-	background:linear-gradient(to bottom, #a53091 5%, #2522f0 100%);
-	background-color:#a53091;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
 }
 </style>
 """,
