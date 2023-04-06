@@ -25,14 +25,13 @@ def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
     return encoded
-def img_to_html(img_path):
-    img_html = "<img src='data:image/png;base64,{}' class='img-fluid'>".format(
-      img_to_bytes(img_path)
+<img src="https://example.com/image.jpg" width=400 height=300>
+<img src="/examples/images/img_monalisa.png" alt="모나리자" height="280" width="180">
+
+def img_to_html(img_path, width = 500, height = 500):
+    img_html = f"<img src='data:image/png;base64,{img_to_bytes(img_path}' height = {height} width = {width} class='img-fluid'>"
     )
     return img_html
-
-st.markdown(img_to_html('img/기업어때_Icon500x500_favicon_2.png'), unsafe_allow_html=True)
-
 
 def paragraph_preprocessing(paragraph):
     # Remove any line breaks and extra white space
@@ -86,6 +85,7 @@ openai.api_key = st.secrets["openai_api_key"]
 
 # web
 st.title('기업어때')
+st.markdown(img_to_html('img/기업어때_Icon500x500_favicon_2.png'), unsafe_allow_html=True)
 st.header('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
 
 # investors 
