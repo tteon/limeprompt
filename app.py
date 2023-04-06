@@ -98,28 +98,28 @@ with col2:
 # investors 
 investors = {
     'warrenbuffett': {
-        'pros': "Buffett's value investing strategy has a long history of success, and he is widely regarded as one of the most successful investors of all time. His focus on high-quality companies with strong competitive advantages and management teams has resulted in significant long-term gains for his investment firm, Berkshire Hathaway.",
-        'cons': "Buffett's approach can be difficult to replicate for individual investors, as it requires a deep understanding of a company's fundamentals and competitive landscape. Additionally, Buffett's approach is often criticized for being too focused on established, large-cap companies, which can limit potential returns."
+        'pros': "버핏의 가치 투자 전략은 오랜 성공의 역사를 가지고 있으며, 그는 역사상 가장 성공적인 투자자 중 한 명으로 널리 여겨집니다. 강력한 경쟁 우위와 경영진을 보유한 고품질 기업에 집중한 그의 투자 회사인 Berkshire Hathaway는 상당한 장기적 이익을 얻었습니다.",
+        'cons': "Buffet의 접근 방식은 기업의 기본 원리와 경쟁 환경에 대한 깊은 이해가 필요하기 때문에 개인 투자자들에게 복제하기 어려울 수 있습니다. 게다가, 버핏의 접근 방식은 종종 기존의 대형 회사에 너무 집중하여 잠재적인 수익을 제한할 수 있다는 비판을 받습니다."
     },
     'peterlynch': {
-        'pros': "Lynch's 'buy what you know' approach is appealing for individual investors, as it emphasizes investing in companies that you are familiar with and understand. His focus on companies with strong fundamentals and growth potential has also proven successful in many cases.",
-        'cons': "Lynch's approach can be risky for individual investors who do not have a deep understanding of a company's underlying business. Additionally, Lynch's focus on growth stocks can lead to volatility and potentially significant losses in market downturns."
+        'pros': "Lynch의 '당신이 아는 것을 사세요' 접근법은 당신이 친숙하고 이해하는 회사에 투자하는 것을 강조하기 때문에 개인 투자자들에게 매력적입니다. 강력한 기반과 성장 잠재력을 가진 기업에 집중한 그의 노력은 많은 경우에도 성공적인 것으로 입증되었습니다.",
+        'cons': "Lynch의 접근 방식은 회사의 기본 비즈니스에 대한 깊은 이해가 없는 개인 투자자들에게 위험할 수 있습니다. 또한, 성장주에 대한 린치의 집중은 변동성과 잠재적으로 시장 침체에서 상당한 손실을 초래할 수 있습니다."
     },
     'benjamingraham': {
-        'pros': "Graham's value investing approach is widely regarded as a sound strategy for long-term investors. His emphasis on fundamental analysis and metrics such as price-to-earnings ratio and price-to-book ratio can help identify undervalued stocks.",
-        'cons': "Graham's approach can be time-consuming and requires a significant amount of research and analysis. Additionally, his focus on buying stocks at a discount to their intrinsic value can limit potential returns in a rapidly growing market."
+        'pros': "그레이엄의 가치 투자 접근법은 장기 투자자들을 위한 건전한 전략으로 널리 간주됩니다. 그가 주가수익률, 주가수익률 등 근본적인 분석과 지표를 강조하는 것은 저평가된 종목을 파악하는 데 도움이 될 수 있습니다.",
+        'cons': "그레이엄의 접근 방식은 시간이 많이 걸릴 수 있으며 상당한 양의 연구와 분석이 필요합니다. 게다가, 그가 본질적인 가치를 할인하여 주식을 사는 것에 집중하는 것은 빠르게 성장하는 시장에서 잠재적인 수익을 제한할 수 있습니다."
     },
     'raydalio': {
-        'pros': "Dalio's 'all-weather' portfolio strategy is appealing for investors who are looking to minimize risk and volatility. His focus on diversification across different asset classes and geographies can help reduce risk in a portfolio.",
-        'cons': "Dalio's approach can be difficult to implement for individual investors, as it requires access to a wide range of investment options and a significant amount of capital. Additionally, his focus on macroeconomic trends can lead to missed opportunities in individual stocks or sectors."
+        'pros': "Dalio의 '전천후' 포트폴리오 전략은 위험과 변동성을 최소화하려는 투자자들에게 매력적입니다. 다양한 자산 클래스와 지역에 걸친 다양화에 중점을 둔 그의 노력은 포트폴리오의 리스크를 줄이는 데 도움이 될 수 있습니다.",
+        'cons': "Dalio의 접근 방식은 광범위한 투자 옵션과 상당한 자본을 필요로 하기 때문에 개인 투자자들에게 구현하기 어려울 수 있습니다. 또한 거시 경제 동향에 대한 그의 집중은 개별 주식이나 부문에서 기회를 놓치는 결과를 초래할 수 있습니다."
     },
     'georgesoros': {
-        'pros': "Soros's focus on macroeconomic trends and his ability to make large, successful bets on currency markets has resulted in significant gains for his investment firm, Soros Fund Management.",
-        'cons': "Soros's approach can be risky for individual investors, as it requires a significant amount of expertise in currency markets and a willingness to take large risks. Additionally, his focus on market reflexivity can lead to a self-fulfilling prophecy, as market participants may adjust their beliefs and actions based on Soros's actions."
+        'pros': "소로스는 금융계에서 폭넓은 인맥을 보유하고 있어 귀중한 정보와 통찰력에 접근할 수 있습니다. 마지막으로, 소로스는 사회적으로 책임 있는 투자자들에게 어필할 수 있는 자선 사업과 사회적 행동주의로도 유명합니다.",
+        'cons': "소로스는 시장을 조작하고 그의 재산을 정치에 영향을 미치기 위해 사용한 혐의를 받고 있는 논란이 많은 인물입니다. 소로스 펀드 운용사는 민간투자회사로 보유주식이나 투자전략을 외부에 공개하지 않아 일부 투자자들의 고민거리가 될 수 있습니다. "
     },
     'johnpaulson': {
-        'pros': "Paulson's focus on identifying macroeconomic trends and making bets on specific sectors or assets has resulted in significant gains in the past, such as his successful bet against the subprime mortgage market in 2007.",
-        'cons': "Paulson's approach can be risky for individual investors, as it requires a significant amount of expertise in macroeconomic trends and sector-specific knowledge. Additionally, his approach can be subject to significant market volatility, as evidenced by his recent losses in the gold market."
+        'pros': "폴슨이 거시경제 동향을 파악하고 특정 부문이나 자산에 베팅하는 데 초점을 맞춘 것은 2007년 서브프라임 모기지(비우량 주택담보대출) 시장에 대한 성공적인 베팅과 같은 과거에 상당한 이득을 가져온 결과입니다.
+        'cons': "폴슨의 접근 방식은 거시 경제 동향과 부문별 지식에 대한 상당한 전문 지식이 필요하기 때문에 개인 투자자에게 위험할 수 있습니다. 또한, 그의 접근 방식은 최근 금 시장에서 손실을 입은 것에서 입증된 것처럼 상당한 시장 변동성을 겪을 수 있습니다."
     }
 }
 
