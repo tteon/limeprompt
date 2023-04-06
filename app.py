@@ -31,18 +31,6 @@ def img_to_html(img_path, width , height):
     img_html = f"<img src='data:image/png;base64,{img_to_bytes(img_path)}' width = {width} height = {height} class='img-fluid'>"
     return img_html
 
-def paragraph_preprocessing(paragraph):
-    # Remove any line breaks and extra white space
-    paragraph = re.sub(r'\s+', ' ', paragraph)
-
-    # Remove any empty strings
-    paragraph = list(filter(None, paragraph.split(' ')))
-
-    # Join the paragraph back into a string
-    paragraph = ' '.join(paragraph)
-    return paragraph
-
-
 def loadcompanyinformation(company:str = 'NVDA', item:str = 'income_statement'):
     infodict = defaultdict()
     commpanyinfo = Ticker(company)
