@@ -292,6 +292,8 @@ try:
                     waitparagraph.empty()
                     report = paragraph_preprocessing(response['choices'][0]['message']['content'])
                     st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
+		
+		st.download_button('결과물 다운로드', report)
 
 except AttributeError:
     st.caption(f'⚠️ 티커가 입력되어있지 않아요. 티커 입력 후 Enter 를 눌러주세요.')
