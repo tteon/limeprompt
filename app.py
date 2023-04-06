@@ -42,7 +42,6 @@ def paragraph_preprocessing(paragraph):
     paragraph = ' '.join(paragraph)
     return paragraph
 
-
 def loadcompanyinformation(company:str = 'NVDA', item:str = 'income_statement'):
     infodict = defaultdict()
     commpanyinfo = Ticker(company)
@@ -51,7 +50,6 @@ def loadcompanyinformation(company:str = 'NVDA', item:str = 'income_statement'):
             infodict[idx] = info
     accountinginfo = infodict.items()
     return accountinginfo
-
 
 def getlongname(symbol):    
     # Define the URL for the stock's Yahoo Finance page
@@ -269,7 +267,7 @@ try:
                 
                 # prompt scenario #################
                 message = defaultdict()
-                message['system'] = f'you are the {advisor} advisor for help investment people who didnt know well the accounting information. so you should help him by {advisor} manner and view.'
+                message['system'] = f'you are the {advisor} advisor for help investment people who didnt know well the accounting information. so you should help him by {advisor} manner and view. and you have to divide the results of outcome by separator for intutive report'
                 message['user1'] = f"i'm now considering {companylongname} company is it reasonable to investment for now?"
                 message['assistant1'] = f"of course. i will help your investment by {advisor} view about the {companylongname}"
                 message['user2'] = f"i will give you the company accounting information the 'NVDA' accounting information is {accountinginfo}"
@@ -293,7 +291,8 @@ try:
                 # report shoot
                 if response:
                     waitparagraph.empty()
-                    report = paragraph_preprocessing(response['choices'][0]['message']['content'])
+                    #report = paragraph_preprocessing(response['choices'][0]['message']['content'])
+		    report = response['choices'][0]['message']['content']
                     st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
 
     st.download_button(label='Report Download', data=report, file_name=f'{advisor} with {companylongname}.txt', mime='text/plain')
