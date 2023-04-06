@@ -289,11 +289,12 @@ try:
                         )
 		
                 # report shoot
-                if response:
+		if response:
                     waitparagraph.empty()
-                    #report = paragraph_preprocessing(response['choices'][0]['message']['content'])
-		    report = response['choices'][0]['message']['content']
-                    st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
+                    # report = paragraph_preprocessing(response['choices'][0]['message']['content'])
+                    # st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
+                    report_none = response['choices'][0]['message']['content']
+                    st.text_area(label = f'{advisor} 의 레포팅입니다', value = report_none, height=col2height)
 
     st.download_button(label='Report Download', data=report, file_name=f'{advisor} with {companylongname}.txt', mime='text/plain')
 except AttributeError:
