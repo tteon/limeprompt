@@ -82,6 +82,9 @@ st.set_page_config(
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = st.secrets["openai_api_key"]
 
+# empty report
+report = ' '
+
 # web
 
 # st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
@@ -292,8 +295,8 @@ try:
                     waitparagraph.empty()
                     report = paragraph_preprocessing(response['choices'][0]['message']['content'])
                     st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
-		    st.download_button('결과물 다운로드', report)
 
+    st.download_button(label='Download file', data=report, file_name=f'{advisor} with {companylongname}.txt', mime='text/plain')
 except AttributeError:
     st.caption(f'⚠️ 티커가 입력되어있지 않아요. 티커 입력 후 Enter 를 눌러주세요.')
     pass
