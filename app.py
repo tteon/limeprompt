@@ -132,7 +132,7 @@ advisor = st.selectbox(
 if advisor:
     st.markdown(f"<p style='color: #6482FF; font-size: 10px'>{advisor}을 고르셨군요! {advisor}의 특징을 확인해보세요.</p>", unsafe_allow_html=True)
 
-with st.expander('투자대가의 일장일단'):
+with st.expander('투자자 소개'):
 
         col1, col2 = st.columns(2)
         with col1:
