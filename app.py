@@ -294,7 +294,7 @@ try:
                 if response:
                     waitparagraph.empty()
                     report = response['choices'][0]['message']['content']
-                    st.text_area(label = f'{advisor} 의 레포팅입니다', value = report_none, height=col2height)
+                    st.text_area(label = f'{advisor} 의 레포팅입니다', value = report, height=col2height)
 
     st.download_button(label='download reports', data=report, file_name=f'{advisor} with {companylongname}.txt', mime='text/plain')
 except AttributeError:
