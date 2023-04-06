@@ -281,8 +281,6 @@ try:
                             max_tokens=2048,
                             stream=False,
                         )
-		text_area = st.empty()
-		text_area.text(f" 레포트 생성중입니다 ")
 		
 		# report shoot
                 st.markdown(f'{advisor} 의 레포팅입니다.')
