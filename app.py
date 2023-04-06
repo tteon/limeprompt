@@ -281,13 +281,9 @@ try:
                             max_tokens=2048,
                             stream=False,
                         )
-		
-		# report wait time
 		text_area = st.empty()
-		text_area.text(f" 레포트를 생성하는 중입니다. 잠시만 기다려 주시면 감사하겠습니다~ ")
+		text_area.text(f" 레포트 생성중입니다 ")
 		
-		if response:
-		  text_area = st.empty()
 		# report shoot
                 st.markdown(f'{advisor} 의 레포팅입니다.')
                 report = paragraph_preprocessing(response['choices'][0]['message']['content'])
