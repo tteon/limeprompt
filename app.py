@@ -185,9 +185,11 @@ def generate_report():
         # Simulate a time delay
         time.sleep(1)
 
-    # Display the report
-    text_area.text("Report generation complete!")
+generate_report()
 	
+# Display the report
+text_area.text("Report generation complete!")
+
 #############################################################################################
 targetticker = st.text_input('분석할 기업의 티커를 입력해주세요.',placeholder='예시) NVDA')
 st.markdown(f"<p style='color: #6482FF; font-size: 10px'>지금은 뉴욕증권거래소에 상장된 기업만 입력이 가능해요.</p>", unsafe_allow_html=True)
