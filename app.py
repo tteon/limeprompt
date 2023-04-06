@@ -173,8 +173,21 @@ button:active {
 
 
 #############################################################################################
+def generate_report():
+    # Create an empty container for the text area
+    text_area = st.empty()
+    
+    # Perform some time-consuming task
+    for i in range(10):
+        # Update the text area with the current wait time
+        text_area.text(f"Please wait... Generating report {i+1}/10")
+        
+        # Simulate a time delay
+        time.sleep(1)
 
-
+    # Display the report
+    text_area.text("Report generation complete!")
+	
 #############################################################################################
 targetticker = st.text_input('분석할 기업의 티커를 입력해주세요.',placeholder='예시) NVDA')
 st.markdown(f"<p style='color: #6482FF; font-size: 10px'>지금은 뉴욕증권거래소에 상장된 기업만 입력이 가능해요.</p>", unsafe_allow_html=True)
@@ -281,6 +294,8 @@ try:
                             stream=False,
                         )
                 
+		
+		
                 st.markdown(f'{advisor} 의 레포팅입니다.')
                 report = paragraph_preprocessing(response['choices'][0]['message']['content'])
                 st.write(report)
