@@ -86,7 +86,7 @@ with col1:
 	st.header('Pros')
 	st.title('기업어때')
 
-with col2:
+with col3:
 	st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
 	
 st.title('기업어때')
