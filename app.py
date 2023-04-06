@@ -131,7 +131,7 @@ div.stButton > button:first-child {
 	background:linear-gradient(to bottom, #2522f0 5%, #a53091 100%);
 	background-color:#2522f0;
 	border-radius:28px;
-	border:1px solid #ffffff;
+	border:1px solid #000000;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
