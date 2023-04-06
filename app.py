@@ -59,12 +59,13 @@ def slow_function():
 # Enable wide mode
 st.set_page_config(
     page_title="여기어때",
-    page_icon="favicon",
+    page_icon="🧊favicon",
     layout="wide",
     menu_items={
-        'Report a bug': 'limeprompt@service.com',
-    },
-    page_bg_color="#000000",  # Set black background color
+        'Get Help': 'limeprompt@service.com',
+        'Report a bug': "jeongiitae6@gmail.com",
+        'About': "# This is a header. This is an *extremely* cool investment guidance app!"
+    }
 )
 
 # Get the values of the environment variables
