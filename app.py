@@ -81,8 +81,15 @@ st.set_page_config(
 openai.api_key = st.secrets["openai_api_key"]
 
 # web
+col1, _, col3 = st.columns([2,0.5,8])
+	with col1:
+	  st.header('Pros')
+	  st.title('기업어때')
+
+	with col2:
+	  st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
+	
 st.title('기업어때')
-# st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
 st.markdown(body = img_to_html(img_path='img/기업어때_Icon500x500_favicon_2.png' , width= 100, height = 100), unsafe_allow_html=True)
 st.markdown("<p style='color: #6482FF; font-size: 10px'>test 용입니다.</p>", unsafe_allow_html=True)
 st.header('안녕하세요. 투자대가와 분석할 기업을 선택해주세요.')
