@@ -77,7 +77,7 @@ report = ' '
 
 # st.markdown(img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png', width= 100, height = 100), unsafe_allow_html=True)
 
-col1, _, col2 = st.columns([1,1,15])
+col1, _, col2 = st.columns([1,0.4,15])
 with col1:
 	st.markdown(body = img_to_html(img_path='img/기업어때_Icon500x500_favicon_1.png' , width= 100, height = 100), unsafe_allow_html=True)
 with col2:
