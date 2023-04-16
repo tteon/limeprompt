@@ -257,7 +257,7 @@ try:
                 
                 # prompt scenario #################
                 message = defaultdict()
-                message['system'] = f'you are the {advisor} advisor for help investment people who didnt know well the accounting information. so you should help him by {advisor} manner and view. and you have to divide the results of outcome by separator for intutive report. plus'
+                message['system'] = f'you are the {advisor} advisor for help investment people who didnt know well the accounting information. so you should help him by {advisor} manner and view. and you have to divide the results of outcome by separator for intutive report with measurment for results.'
                 message['user1'] = f"i'm now considering {companylongname} company is it reasonable to investment for now?"
                 message['assistant1'] = f"of course. i will help your investment by {advisor} view about the {companylongname}"
                 message['user2'] = f"i will give you the company accounting information the 'NVDA' accounting information is {accountinginfo}"
