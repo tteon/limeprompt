@@ -118,6 +118,7 @@ spinners==0.0.24
 starlette==0.26.1
 streamlit==1.19.0
 streamlit-option-menu==0.3.2
+streamlit-authenticator==0.2.2
 tenacity==8.2.2
 termcolor==2.2.0
 toml==0.10.2
